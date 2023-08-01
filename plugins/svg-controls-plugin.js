@@ -84,7 +84,7 @@ SVG controls Plugin:
     
     me.controlsBaseURL = "./svg-catalog/controls/";
     //ToDo: Revisit this ... change to appname on same?
-    if( (tmpCurr) && tmpCurr.port && tmpCurr.port == 33461){
+    if( (tmpCurr) && tmpCurr.port && tmpCurr.port == 33481){
         me.controlsBaseURL = "/svg-catalog/controls/";
     };    
     me.defsId = 'control-manager-defs-svg';

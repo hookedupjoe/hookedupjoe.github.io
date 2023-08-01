@@ -269,7 +269,7 @@
     //tmpData.appid = this.currentAppName;
 
     //ToDo: Move this up
-    // var tmpCollName = 'actapp-' + (theData.__doctype || 'default');
+    // var tmpCollName = $.MongoManager.options.prefix.datatype + (theData.__doctype || 'default');
     // tmpData.collection = tmpCollName;
     tmpData.doctype = theData.__doctype;
     var tmpPostOptions = {
@@ -289,7 +289,7 @@
     var tmpBaseURL = ActionAppCore.ActAppData.rootPath;
     var tmpViewer = this.getViewControl();
     self.parts.mainform.prompt({
-      title: 'Add Test Doc', submitLabel: 'Save New Doc'
+      title: '', submitLabel: 'Save New Doc'
     }).then(function(theSubmit, theData) {
       if (!theSubmit) {
         return;
@@ -318,7 +318,7 @@
     var self = this;
 
     self.parts.mainform.prompt({
-      title: 'Edit Test Doc',
+      title: '',
       submitLabel: 'Save Changes',
       doc: tmpRow._row.data
     }).then(function(theSubmit,

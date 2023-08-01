@@ -50,7 +50,7 @@
                 "value": "other"
               },
             "default": "actappdoc",
-            "list": "Document|actappdoc,Design Doc|actappdesigndoc,Design Element|actappelem,Any Action App Doc|(any), Other|other",
+            "list": "Document|actappdoc,Design Doc|actappdesigndoc,Design Element|actappelem,Any Mongino Doc|(any), Other|other",
             "req": true
           },
             {

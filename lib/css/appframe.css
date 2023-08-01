@@ -6,6 +6,13 @@ html, body {
   font-family: Calibri, Tahoma, Geneva, sans-serif;
 }
 
+.cleanzone {
+  -webkit-box-sizing: unset;
+  box-sizing: unset;
+  font-size:unset;
+  font-family: unset;  
+}
+
 .fluid-field {
   width: 100%;
 }
@@ -542,7 +549,7 @@ cursor: not-allowed !important;
   border-top:solid 1px #dddddd;
   padding:4px;
 }
-.aa-ws {
+.mongino-ws {
   min-height:300px;    
 }
 .one-liner {
@@ -552,12 +559,12 @@ cursor: not-allowed !important;
 .ui.menu {
   border:none !important;
 }
-.aa-footer {
+.mongino-footer {
   padding:3px;
   border: solid 1px;
 }
 
-.aa-outside {
+.mongino-outside {
   margin:0px;
   padding:0px;
 }

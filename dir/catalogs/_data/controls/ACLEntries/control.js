@@ -107,7 +107,7 @@
   }
   ControlCode._onInit = function() {
     //--- TEMP DEBUG
-    window.activeControl = this;
+    window.activeACLEntries = this;
     window.activeReport = this.parts.report;
     
     //this.currentAccount = '_home';
@@ -121,7 +121,7 @@
     tmpViewer.setReportURL(tmpBaseURL + 'appdata/auth/get-acl-entries.json?open');
     tmpViewer.subscribe('selectionChange', refreshSelection.bind(this));
     tmpViewer.subscribe('tableBuilt', onTableBuilt.bind(this));
-
+    window.currentViewer = tmpViewer;
 
 
     this.parts.mainform.refreshUI();
@@ -163,11 +163,13 @@
     // Define columns based on Tabulator column documentation
     var tmpTableCols = [{
       "title": "Name",
-      "field": "entryname"
+      "field": "entryname",
+      "width":"300"
     },
       {
         "title": "Level",
-        "field": "level"
+        "field": "level",
+        "width":"300"
       }];
 
 
@@ -178,7 +180,7 @@
       tableConfig: {
          movableColumns: true,
         initialSort: [ {
-          column: "textfield",
+          column: "entryname",
           dir: "asc"
         }]
       },
@@ -209,7 +211,7 @@
     var tmpBaseURL = ActionAppCore.ActAppData.rootPath;
     var tmpViewer = this.getViewControl();
     self.parts.mainform.prompt({
-      title: 'Add Test Doc', submitLabel: 'Save New Doc'
+      title: '', submitLabel: 'Save New Doc'
     }).then(function(theSubmit, theData) {
       if (!theSubmit) {
         return;
@@ -227,7 +229,7 @@
     var self = this;
 
     self.parts.mainform.prompt({
-      title: 'Edit Test Doc',
+      title: '',
       submitLabel: 'Save Changes',
       doc: tmpRow._row.data
     }).then(function(theSubmit,
